@@ -289,13 +289,17 @@ table th {
   }
 
   a {
-    color: var(--wight-color);
+    color: var(--black-color);
     padding: 0.45rem;
     margin: 0 0.25rem;
 
     &:hover {
-      color: var(--light-color);
+      color: var(--grey-color);
     }
+  }
+
+  h1 {
+    margin: 0 0 0.5rem;
   }
 }
 
