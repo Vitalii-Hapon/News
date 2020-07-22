@@ -1,16 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
 @import '~@angular/material/prebuilt-themes/purple-green.css';
 
 :root {
-  --black-color: #333333;
-  --grey-color: #666;
-  --light-grey-color: #ccc;
-  --light-color: #f4f4f4;
-  --wight-color: #fff;
-  --danger-color: #dc3545;
-  --primary-color: #dc3545;
-  --success-color: #28a745;
+  //--black-color: #333333;
+  //--grey-color: #666;
+  //--light-grey-color: #ccc;
+  //--light-color: #f4f4f4;
+  //--wight-color: #fff;
+  //--danger-color: #dc3545;
+  //--primary-color: #dc3545;
+  //--success-color: #28a745;
 }
 
 * {
@@ -23,17 +23,13 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: var(--wight-color);
-  color: var(--black-color);
 }
 
 a {
-  color: var(--primary-color);
   cursor: pointer;
   text-decoration: none;
 
   &:hover {
-    color: var(--grey-color);
   }
 }
 
@@ -50,22 +46,6 @@ img {
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
-}
-
-.text-primary {
-  color: var(--primary-color);
-}
-
-.text-dark {
-  color: var(--black-color);
-}
-
-.text-success {
-  color: var(--success-color);
-}
-
-.text-danger {
-  color: var(--danger-color);
 }
 
 .text-center {
@@ -98,8 +78,6 @@ img {
 
 .btn {
   display: inline-block;
-  background: var(--light-color);
-  color: var(--black-color);
   padding: 0.4rem 1.3rem;
   font-size: 1rem;
   border: none;
@@ -110,8 +88,6 @@ img {
 
   &:disabled {
     cursor: not-allowed;
-    background: var(--light-color);
-    color: var(--black-color);
   }
 }
 
@@ -138,8 +114,6 @@ img {
   padding: 0.2rem 0.7rem;
   text-align: center;
   margin: 0.3rem;
-  background: var(--light-color);
-  color: var(--black-color);
   border-radius: 5px;
 }
 
@@ -147,66 +121,10 @@ img {
   padding: 0.7rem;
   margin: 1rem 0;
   opacity: 0.9;
-  background: var(--light-color);
-  color: var(--black-color);
-}
-
-.btn-primary,
-.bg-primary,
-.badge-primary,
-.alert-primary {
-  background: var(--primary-color);
-  color: var(--wight-color);
-}
-
-.btn-light,
-.bg-light,
-.badge-light,
-.alert-light {
-  background: var(--light-color);
-  color: var(--black-color);
-}
-
-.btn-dark,
-.bg-dark,
-.badge-dark,
-.alert-dark {
-  background: var(--black-color);
-  color: var(--wight-color);
-}
-
-.btn-danger,
-.bg-danger,
-.badge-danger,
-.alert-danger {
-  background: var(--danger-color);
-  color: var(--wight-color);
-}
-
-.btn-success,
-.bg-success,
-.badge-success,
-.alert-success {
-  background: var(--success-color);
-  color: var(--wight-color);
-}
-
-.btn-white,
-.bg-white,
-.badge-white,
-.alert-white {
-  background: var(--wight-color);
-  color: var(--black-color);
-  border: var(--light-grey-color) solid 1px;
 }
 
 .btn:hover {
   opacity: 0.8;
-}
-
-.bg-light,
-.badge-light {
-  border: var(--light-grey-color) solid 1px;
 }
 
 .round-img {
@@ -215,19 +133,8 @@ img {
 
 .form-control {
   display: block;
-  color: #888;
+  //color: #888;
   margin-bottom: .8rem;
-
-  &.invalid {
-    color: var(--primary-color);
-    input {
-      border-color: var(--primary-color);
-    }
-  }
-
-  .validation {
-    color: var(--primary-color);
-  }
 }
 
 input[type='text'],
@@ -240,27 +147,11 @@ textarea {
   width: 100%;
   padding: 0.4rem;
   font-size: 1.2rem;
-  border: 1px solid #ccc;
 }
 
 input[type='submit'],
 button {
   font: inherit;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-table th,
-table td {
-  padding: 1rem;
-  text-align: left;
-}
-
-table th {
-  background: var(--light-color);
 }
 
 .navbar {
@@ -275,7 +166,6 @@ table th {
 
   &.main {
     justify-content: center;
-    border-bottom: 1px solid var(--black-color);
   }
 
   ul {
@@ -283,19 +173,8 @@ table th {
   }
 
   li.active a {
-    color: var(--black-color);
     font-weight: bold;
     cursor: default;
-  }
-
-  a {
-    color: var(--black-color);
-    padding: 0.45rem;
-    margin: 0 0.25rem;
-
-    &:hover {
-      color: var(--grey-color);
-    }
   }
 
   h1 {

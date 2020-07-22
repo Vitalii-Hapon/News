@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {Routes, RouterModule, NoPreloading, PreloadAllModules} from '@angular/router';
 import {MainLayoutComponent} from './Layout/main-layout/main-layout.component';
 import {HomePageComponent} from './Pages/home-page/home-page.component';
 import {PostPageComponent} from './Pages/post-page/post-page.component';
@@ -11,13 +11,15 @@ const routes: Routes = [
     children: [
       {path: '', redirectTo: '/', pathMatch: 'full'},
       {path: '', component: HomePageComponent},
-      {path: 'news/:title', component: PostPageComponent},
+      {path: ':title', component: PostPageComponent},
     ]
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy: PreloadAllModules,
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
