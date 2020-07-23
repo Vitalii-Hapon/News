@@ -1,15 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './Layout/main-layout/main-layout.component';
 import { HomePageComponent } from './Pages/home-page/home-page.component';
 import { PostPageComponent } from './Pages/post-page/post-page.component';
-import { FilterPipe } from './pipes/filter.pipe';
 import { PostCardComponent } from './components/post-card/post-card.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import {AngMaterialsModule} from './ang-materials/ang-materials.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { PostCardComponent } from './components/post-card/post-card.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatProgressSpinnerModule,
+    AngMaterialsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

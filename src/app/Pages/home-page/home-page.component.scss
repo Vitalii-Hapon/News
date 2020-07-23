@@ -1,0 +1,11 @@
+mat-list {
+  height: auto;
+  width: 60vw;
+  margin: 0 auto;
+
+  mat-list-item {
+    height: inherit;
+    margin: 0.5rem 0;
+    cursor: pointer;
+  }
+}
