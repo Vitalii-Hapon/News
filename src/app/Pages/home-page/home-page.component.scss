@@ -1,11 +1,29 @@
 mat-list {
   height: auto;
-  width: 60vw;
-  margin: 0 auto;
+  //width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
   mat-list-item {
     height: inherit;
-    margin: 0.5rem 0;
+    margin: 0.5rem 0.5rem;
     cursor: pointer;
+    flex: 0 1 25vw;
   }
+}
+
+mat-form-field {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+
+  mat-label {
+    color: black;
+  }
+
+  input {
+    color: black;
+  }
+
 }

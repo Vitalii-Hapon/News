@@ -1,9 +1,11 @@
 :host {
   width: 100%;
+
 }
 
 mat-card {
   box-shadow: none;
+  //width: 25vw;
 
   mat-card-content {
     padding: 0 1rem;
@@ -12,7 +14,7 @@ mat-card {
 
     img {
       margin: 0 !important;
-      width: 70%;
+      width: 30%;
     }
 
     p {
