@@ -14,9 +14,6 @@ mat-card {
     margin: 0 !important;
   }
 
-.wraper {
-  //display: flex;
-}
   mat-card-content {
 
     margin: 1rem;
@@ -32,16 +29,17 @@ mat-card {
       padding: 0.2rem 1rem;
     }
   }
-mat-card-actions {
-  position: absolute;
-  left: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  box-sizing: border-box;
-  margin: -16 px 0 0 0;
-  padding: 0;
-}
+
+  mat-card-actions {
+    position: absolute;
+    left: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+    margin: -16 px 0 0 0;
+    padding: 0;
+  }
 }
 

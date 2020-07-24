@@ -10,6 +10,7 @@ import { PostPageComponent } from './Pages/post-page/post-page.component';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import {AngMaterialsModule} from './ang-materials/ang-materials.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {AngMaterialsModule} from './ang-materials/ang-materials.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     AngMaterialsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
