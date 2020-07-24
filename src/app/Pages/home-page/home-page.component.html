@@ -6,76 +6,15 @@
   </button>
 </mat-form-field>
 
-<mat-list>
+<mat-list *ngIf="news$ | async as news; else loading">
 
-  <mat-list-item class="mat-list-item mat-card"
-                 [routerLink]="['/22']">
-    <app-post-card>
-
+  <mat-list-item
+                 *ngFor="let post of news"
+                 [routerLink]="['/', post.title]">
+    <app-post-card [post]="post">
     </app-post-card>
   </mat-list-item>
 
-  <mat-list-item class="mat-list-item mat-card"
-                 [routerLink]="['/33']">
-    <app-post-card>
-
-    </app-post-card>
-  </mat-list-item>
-
-  <mat-list-item class="mat-list-item mat-card"
-                 [routerLink]="['/33']"
-  >
-    <app-post-card>
-
-    </app-post-card>
-  </mat-list-item>
-
-  <mat-list-item class="mat-list-item mat-card"
-                 [routerLink]="['/33']"
-  >
-    <app-post-card>
-
-    </app-post-card>
-  </mat-list-item>
-
-  <mat-list-item class="mat-list-item mat-card"
-                 [routerLink]="['/33']"
-                 style="padding: 0">
-    <app-post-card>
-
-    </app-post-card>
-  </mat-list-item>
-
-  <mat-list-item class="mat-list-item mat-card"
-                 [routerLink]="['/33']"
-                 style="padding: 0">
-    <app-post-card>
-
-    </app-post-card>
-  </mat-list-item>
-
-  <mat-list-item class="mat-list-item mat-card"
-                 [routerLink]="['/33']"
-                 style="padding: 0">
-    <app-post-card>
-
-    </app-post-card>
-  </mat-list-item>
-  <mat-list-item class="mat-list-item mat-card"
-                 [routerLink]="['/33']"
-                 style="padding: 0">
-    <app-post-card>
-
-    </app-post-card>
-  </mat-list-item>
-
-  <mat-list-item class="mat-list-item mat-card"
-                 [routerLink]="['/33']"
-                 style="padding: 0">
-    <app-post-card>
-
-    </app-post-card>
-  </mat-list-item>
 </mat-list>
 
 <ng-template #loading>

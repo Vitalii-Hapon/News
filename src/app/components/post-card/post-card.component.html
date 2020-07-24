@@ -1,28 +1,28 @@
+<!--<div>-->
 <mat-card>
 
   <mat-card-header>
     <mat-card-title class="mat-h2">
-      title
+      {{post.title}}
     </mat-card-title>
 
     <mat-card-subtitle>
-      author
+     {{post.author}}
     </mat-card-subtitle>
   </mat-card-header>
 
   <mat-card-content>
 
-    <img mat-card-image src="https://s3.cointelegraph.com/storage/uploads/view/2bf0b32f9ab220bf45cda8dd24af0c15.jpg"
-         alt="image">
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, maiores!</p>
+    <!--<img mat-card-image [src]="post.urlToImage"-->
+         <!--alt="image">-->
+{{post.description}}
   </mat-card-content>
 
   <mat-card-footer>
     <mat-card-subtitle>
-      date
+      {{post.publishedAt | date:'medium'}}
     </mat-card-subtitle>
   </mat-card-footer>
 </mat-card>
 
-
+<!--</div>-->
