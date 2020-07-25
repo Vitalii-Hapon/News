@@ -10,6 +10,7 @@ mat-card {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 
   mat-card-header {
     flex: 0 1 auto;
@@ -22,8 +23,9 @@ mat-card {
     flex: 1 1 auto;
 
     img {
-      margin: 0 !important;
-      //width: 30%;
+      margin: 0 auto !important;
+      width: 50%;
+
     }
 
     p {
@@ -33,6 +35,6 @@ mat-card {
 
   mat-card-footer {
     flex: 0 1 auto;
-    margin-left: 16px;
   }
 }
+

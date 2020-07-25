@@ -9,6 +9,10 @@ mat-list {
     margin: 0.5rem 0.5rem;
     cursor: pointer;
     flex: 0 1 25vw;
+
+    .mat-list-item-content {
+      height: 100%;
+    }
   }
 }
 
@@ -26,3 +30,5 @@ mat-form-field {
   }
 
 }
+
+

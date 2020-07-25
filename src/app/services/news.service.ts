@@ -25,7 +25,7 @@ export interface Post {
 
 export class NewsService {
 
-  readonly HTTP_URL = 'http://newsapi.org/v2/everything?q=bitcoin&from=2020-06-24&sortBy=publishedAt&apiKey=1be834d5d6a845929bcb756e50452e9d';
+  readonly HTTP_URL = 'http://newsapi.org/v2/everything?q=bitcoin&from=2020-06-25&sortBy=publishedAt&apiKey=1be834d5d6a845929bcb756e50452e9d';
   req = new Request(this.HTTP_URL);
 
   constructor() {
