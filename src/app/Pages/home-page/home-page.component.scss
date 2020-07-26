@@ -18,24 +18,17 @@ mat-list {
 
 mat-form-field {
   display: block;
-  margin: 0 auto;
-  width: 300px;
-
-  mat-label {
-    color: black;
-  }
-
-  input {
-    color: black;
-  }
+  //margin: 0 auto;
+  //width: 300px;
 
 }
 
-.spinner-wrapper {
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
+.input-wrapper {
+  margin: 0.5rem auto;
+  padding: 1rem;
+  width: 20rem;
+  opacity: 0.8;
+  border-radius: 1rem;
 }
 
 

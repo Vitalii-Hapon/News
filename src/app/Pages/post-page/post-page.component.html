@@ -1,4 +1,4 @@
-<mat-card *ngIf="post; else loading">
+<mat-card *ngIf="post$ | async as post; else loading">
 
   <mat-card-actions>
     <button mat-button routerLink="/">

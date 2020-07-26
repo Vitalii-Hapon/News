@@ -16,7 +16,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
   filter: string;
   searchInput = new FormControl('');
   ngUnsubscribe = new Subject();
-  pageSize = 5;
+  pageSize = 10;
   startIndex = 0;
   endIndex = this.pageSize;
 
