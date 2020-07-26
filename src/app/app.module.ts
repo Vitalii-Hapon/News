@@ -27,7 +27,7 @@ const INTERCEPTOR_PROVIDER: Provider = {
     HomePageComponent,
     PostPageComponent,
     FilterPipe,
-    PostCardComponent
+    PostCardComponent,
   ],
   imports: [
     BrowserModule,
