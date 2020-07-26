@@ -15,7 +15,12 @@ export interface Post {
   urlToImage: string | null;
   publishedAt: Date;
   content: string;
+}
 
+export interface Response {
+  status: string;
+  totalResults: number;
+  articles: Post[];
 }
 
 @Injectable({
@@ -30,12 +35,12 @@ export class NewsService {
   }
 
   getPosts(): Observable<Post[]> {
-    return this.http.get(this.HTTP_URL).pipe(map(value => value.articles));
+    return this.http.get<Response>(this.HTTP_URL).pipe(map(value => value.articles));
   }
 
   getPostByTitle(title: string): Observable<Post> {
-    return this.http.get(this.HTTP_URL).pipe(map(value => {
-      return value.articles.find( item => item.title.toLowerCase() === title.toLowerCase());
+    return this.http.get<Response>(this.HTTP_URL).pipe(map(value => {
+      return value.articles.find(item => item.title.toLowerCase() === title.toLowerCase());
     }));
   }
 }
