@@ -20,7 +20,7 @@
   <mat-list>
 
     <mat-list-item *ngFor="let post of news | filter: searchInput.value | slice: startIndex : endIndex, let i = index"
-                   [routerLink]="['/', i]">
+                   [routerLink]="['/', post.title]">
       <!--*ngFor="let post of news | filter: searchInput.value, let i = index"-->
 
       <app-post-card [post]="post">

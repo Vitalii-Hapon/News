@@ -11,7 +11,6 @@ export interface Post {
   author: string;
   title: string;
   description: string | null;
-  // url: webkitURL;
   url: string;
   urlToImage: string | null;
   publishedAt: Date;
@@ -34,8 +33,10 @@ export class NewsService {
     return this.http.get(this.HTTP_URL).pipe(map(value => value.articles));
   }
 
-  getPostByIndex(index: number): Observable<any> {
-    return this.http.get(this.HTTP_URL).pipe(map(value => value.articles[index]));
+  getPostByTitle(title: string): Observable<Post> {
+    return this.http.get(this.HTTP_URL).pipe(map(value => {
+      return value.articles.find( item => item.title.toLowerCase() === title.toLowerCase());
+    }));
   }
 }
 

@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {NewsService, Post} from '../../services/news.service';
-import {Observable, Subject} from 'rxjs';
+import {Subject} from 'rxjs';
 import {FormControl} from '@angular/forms';
 import {takeUntil} from 'rxjs/operators';
 import {PageEvent} from '@angular/material/paginator';
@@ -25,7 +25,11 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.getFilterValue();
+    this.getNews();
+    this.checkFilterInput();
+  }
 
+  getNews(): void {
     this.newsService
       .getPosts()
       .pipe(
@@ -33,12 +37,13 @@ export class HomePageComponent implements OnInit, OnDestroy {
       .subscribe(value => {
         this.news = value;
       });
+  }
 
+  checkFilterInput(): void {
     this.searchInput.valueChanges
       .pipe(
         takeUntil(this.ngUnsubscribe))
       .subscribe(value => {
-        // this.filterNews(this.filter);
         this.filter = value;
         sessionStorage.setItem('filter', this.filter);
       });
@@ -49,11 +54,6 @@ export class HomePageComponent implements OnInit, OnDestroy {
       this.filter = sessionStorage.getItem('filter');
       this.searchInput.patchValue(this.filter);
     }
-  }
-
-  ngOnDestroy(): void {
-    this.ngUnsubscribe.next();
-    this.ngUnsubscribe.complete();
   }
 
   clearFilter(): void {
@@ -68,6 +68,11 @@ export class HomePageComponent implements OnInit, OnDestroy {
     if (this.endIndex > this.news.length) {
       this.endIndex = this.news.length;
     }
+  }
+
+  ngOnDestroy(): void {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
   }
 }
 
