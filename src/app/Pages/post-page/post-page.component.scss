@@ -12,11 +12,13 @@ mat-card {
   img {
     width: 40%;
     margin: 0 !important;
+    min-width: 500px;
+    min-height: 250px;
   }
 
   mat-card-content {
-
     margin: 1rem;
+    max-width: 73vw;
   }
 
   mat-card-footer {
@@ -43,3 +45,6 @@ mat-card {
   }
 }
 
+a {
+  color: #000;
+}

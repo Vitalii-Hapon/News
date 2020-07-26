@@ -11,6 +11,7 @@ import { PostCardComponent } from './components/post-card/post-card.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import {AngMaterialsModule} from './ang-materials/ang-materials.module';
 import {HttpClientModule} from '@angular/common/http';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserAnimationsModule,
     AngMaterialsModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
