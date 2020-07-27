@@ -13,7 +13,6 @@ import {PageEvent} from '@angular/material/paginator';
 export class HomePageComponent implements OnInit, OnDestroy {
 
   news: Post[];
-  filter: string;
   searchInput = new FormControl('');
   ngUnsubscribe = new Subject();
   pageSize = 10;
@@ -44,22 +43,19 @@ export class HomePageComponent implements OnInit, OnDestroy {
       .pipe(
         takeUntil(this.ngUnsubscribe))
       .subscribe(value => {
-        this.filter = value;
-        sessionStorage.setItem('filter', this.filter);
+        sessionStorage.setItem('filter', value);
       });
   }
 
   getFilterValue(): void {
     if (sessionStorage.getItem('filter')) {
-      this.filter = sessionStorage.getItem('filter');
-      this.searchInput.patchValue(this.filter);
+      this.searchInput.patchValue(sessionStorage.getItem('filter'));
     }
   }
 
   clearFilter(): void {
     this.searchInput.patchValue('');
-    this.filter = '';
-    sessionStorage.setItem('filter', this.filter);
+    sessionStorage.setItem('filter', '');
   }
 
   changePage(event: PageEvent): void {

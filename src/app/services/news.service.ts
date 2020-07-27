@@ -29,7 +29,7 @@ export interface Response {
 
 export class NewsService {
 
-  readonly HTTP_URL = 'http://newsapi.org/v2/everything?q=bitcoin&from=2020-06-26&sortBy=publishedAt&apiKey=1be834d5d6a845929bcb756e50452e9d';
+  readonly HTTP_URL = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=1be834d5d6a845929bcb756e50452e9d';
 
   constructor(private http: HttpClient) {
   }
