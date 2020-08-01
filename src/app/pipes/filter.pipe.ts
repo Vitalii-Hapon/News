@@ -1,12 +1,12 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {Post} from '../services/news.service';
+import {IPost} from '../services/news.service';
 
 @Pipe({
   name: 'filter'
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(posts: Post[], filter: string = ''): Post[] {
+  transform(posts: IPost[], filter: string = ''): IPost[] {
     if (!filter.toLowerCase().trim()) {
       return posts;
     } else {

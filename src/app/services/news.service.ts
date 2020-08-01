@@ -3,7 +3,7 @@ import {map} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 
-export interface Post {
+export interface IPost {
   source: {
     id: string | null,
     name: string,
@@ -17,10 +17,10 @@ export interface Post {
   content: string;
 }
 
-export interface Response {
+export interface IResponse {
   status: string;
   totalResults: number;
-  articles: Post[];
+  articles: IPost[];
 }
 
 @Injectable({
@@ -34,12 +34,12 @@ export class NewsService {
   constructor(private http: HttpClient) {
   }
 
-  getPosts(): Observable<Post[]> {
-    return this.http.get<Response>(this.HTTP_URL).pipe(map(value => value.articles));
+  getPosts(): Observable<IPost[]> {
+    return this.http.get<IResponse>(this.HTTP_URL).pipe(map(value => value.articles));
   }
 
-  getPostByTitle(title: string): Observable<Post> {
-    return this.http.get<Response>(this.HTTP_URL).pipe(map(value => {
+  getPostByTitle(title: string): Observable<IPost> {
+    return this.http.get<IResponse>(this.HTTP_URL).pipe(map(value => {
       return value.articles.find(item => item.title.toLowerCase() === title.toLowerCase());
     }));
   }

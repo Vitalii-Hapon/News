@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Post} from '../../services/news.service';
+import {IPost} from '../../services/news.service';
 
 @Component({
   selector: 'app-post-card',
@@ -8,7 +8,7 @@ import {Post} from '../../services/news.service';
 })
 
 export class PostCardComponent implements OnInit {
-  @Input() post: Post;
+  @Input() post: IPost;
 
   constructor() { }
 

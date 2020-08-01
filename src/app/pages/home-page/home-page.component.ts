@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {NewsService, Post} from '../../services/news.service';
+import {NewsService, IPost} from '../../services/news.service';
 import {Subject} from 'rxjs';
 import {FormControl} from '@angular/forms';
 import {takeUntil} from 'rxjs/operators';
@@ -12,7 +12,7 @@ import {PageEvent} from '@angular/material/paginator';
 })
 export class HomePageComponent implements OnInit, OnDestroy {
 
-  news: Post[];
+  news: IPost[];
   searchInput = new FormControl('');
   ngUnsubscribe = new Subject();
   pageSize = 10;

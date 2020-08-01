@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NewsService, Post} from '../../services/news.service';
+import {NewsService, IPost} from '../../services/news.service';
 import {ActivatedRoute, Params} from '@angular/router';
 import {switchMap} from 'rxjs/operators';
 import {Observable} from 'rxjs';
@@ -11,7 +11,7 @@ import {Observable} from 'rxjs';
 })
 export class PostPageComponent implements OnInit {
 
-  post$: Observable<Post>;
+  post$: Observable<IPost>;
 
   constructor(private newsService: NewsService,
               private router: ActivatedRoute) {
